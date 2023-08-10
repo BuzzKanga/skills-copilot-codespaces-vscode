@@ -1,9 +1,12 @@
-function skillsMmeber() {
-    var skills = ['HTML', 'CSS', 'JS', 'React', 'Node'];
-    var member = {
-        name: 'Yoon',
-        age: 26,
-        skills: skills
-    };
-    return member;
+function skillsMember() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/skills-member.html',
+    scope: {
+      skill: '='
+    },
+    controller: function($scope) {
+      $scope.skill = $scope.skill;
+    }
+  };
 }
